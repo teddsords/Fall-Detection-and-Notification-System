@@ -1,8 +1,8 @@
 import requests
 
-#https://api.telegram.org/bot1917311024:AAFPgoPARY7UkdUfSgytDHlqsNO9eGylSK0/getUpdates
+#https://api.telegram.org/botXXXX:YYYYY/getUpdates
 
-token = '1917311024:AAFPgoPARY7UkdUfSgytDHlqsNO9eGylSK0'
+token = '' # get token from tokens.txt
 def broadcastMessage(listOfGroups, message):
     for groupToSend in listOfGroups:
         URL = 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}&parse_mode=HTML'.format(token, groupToSend, message)

@@ -1,8 +1,8 @@
 import os
 from twilio.rest import Client
 
-twilio_sid = 'AC3da7fb3f4894ca554fc79697ca586e04'
-twilio_token = '804ca695d629ac8b6841d3b7b320fd31'
+twilio_sid = ''     # get token from tokens.txt
+twilio_token = ''   # get token from tokens.txt
 client = Client(twilio_sid, twilio_token)
 
 from_whatsapp_number = 'whatsapp:+14155238886'
