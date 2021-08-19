@@ -3,3 +3,4 @@
 *.ui
 Tokens.txt
 pywhatkit_dbs.txt
+__pycache__/
