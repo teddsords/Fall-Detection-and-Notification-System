@@ -42,6 +42,7 @@ class RegisterContactDialog(QDialog):
         file = open('Telegram Token.txt', 'r')
         token = file.readline()
         telegramID = self.ui.telegramID_lineEdit.text()
+        self.ui.telegramID_lineEdit.setText('')
         URL = 'https://api.telegram.org/bot{}/sendMessage?chat_id={}&text={}&parse_mode=HTML'.format(token, telegramID, message)
         resp = requests.get(URL)
         print(resp.text)
