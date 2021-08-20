@@ -2,5 +2,6 @@
 *.png
 *.ui
 Tokens.txt
+Telegram Token.txt
 pywhatkit_dbs.txt
 __pycache__/
