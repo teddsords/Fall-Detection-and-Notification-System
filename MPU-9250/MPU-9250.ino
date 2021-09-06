@@ -1,22 +1,27 @@
-#include <MPU9250.h>
-#include <Wire.h>
+/********************************************************************
+; File name:    MPU-9250.ino            
+; Date:         6 de setembro de 2021          
+; Version:      1.0                              
+; Arduino IDE:  v1.8.16  
+; Author:       Teddy Ordoñez              
+*********************************************************************/
 
-MPU9250 IMU (Wire, 0x68);
-int status;
+/* 
+This code was created by using Bolder Flight MPU-9250 library created by Brian R. Taylor
+Currently using version 1.0.1. Firstly we create an MPU9250 object to call its functions.
+When creating the object, we will be using I2C for communication protocol and 0x68
+is the I2C address for the sensor. After it, we initiate the object and we start
+reading the sensors in the loop function.
+*/
+
+#include <MPU9250.h>      // Including library for MPU-9250 sensor
+#include <Wire.h>         // Including library for I2C communication
+int status;               // Creating variable for receiving the status after initiating the object
+MPU9250 IMU(Wire, 0x68);  // Creating IMU object
 
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(115200);
-  
-  status = IMU.begin();
-  if (status < 0) {
-    Serial.println("IMU initialization unsuccessful");
-    Serial.println("Check IMU wiring or try cycling power");
-    Serial.print("Status: ");
-    Serial.println(status);
-    while(1) {}
-  }
-
+  Serial.begin(115200);   // Beginning communication with Serial monitor @ 115200 baud rate
+  status = IMU.begin();   // Initiating object
 }
 
 void loop() {
@@ -53,12 +58,9 @@ void loop() {
   Serial.print("\t Magnetometer Z Axis: ");
   Serial.println(IMU.getMagZ_uT(), 2);
 
-  // Data from temperature sensor
-  Serial.print("Temperature: ");
-  Serial.println(IMU.getTemperature_C(),2);
 
-  Serial.print("\n\n");
+  Serial.print("-------------------------\n");
 
-  delay(2000);
+  delay(2000);      // Fix delay time
 
 }
