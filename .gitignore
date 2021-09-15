@@ -6,3 +6,13 @@ Telegram Token.txt
 pywhatkit_dbs.txt
 __pycache__/
 MPU-9250/ESP32-Arduino-MPU9250-master.zip
+Flatten Dataset/
+FallAllD/FallAllD/
+FallAllD/scripts/
+FallAllD/*.zip
+FallAllD/FallAllD.csv
+FallAllD/FallAllD.pkl
+Studying Pandas/FallAllD.pkl
+Studying Pandas/filtered.csv
+Studying Pandas/modified.csv
+Studying Pandas/pokemon_data.csv
