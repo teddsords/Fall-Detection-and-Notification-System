@@ -32,7 +32,7 @@ for i in range(LL):
     SubjectID=int(f_name[1:3])    
     l_SubjectID.append(np.uint8(SubjectID))
     ActivityID=int(f_name[8:11])    
-    l_ActivityID.append(np.uint8(ActivityID))
+    l_ActivityID.append(np.uint16(ActivityID))
     TrialNo=int(f_name[13:15])    
     l_TrialNo.append(np.uint8(TrialNo))
     Device=''
