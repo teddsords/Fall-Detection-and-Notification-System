@@ -1,6 +1,7 @@
 *.jpeg
 *.png
 *.ui
+*.zip
 Tokens.txt
 Telegram Token.txt
 pywhatkit_dbs.txt

@@ -6,8 +6,8 @@ from matplotlib import pyplot
 FallAllD = pd.read_pickle('FallAllD.pkl')
 #FallAllD = pd.read_hdf('FallAllD.h5', 'df')
 print(FallAllD.info())
-indexToPlot = 1
-sensor = 3  # Use 1 for Acc, 2 for Gyr and 3 for Mag
+indexToPlot = 0
+sensor = 1  # Use 1 for Acc, 2 for Gyr and 3 for Mag
 print(FallAllD.loc[indexToPlot])
 
 if sensor == 1:
