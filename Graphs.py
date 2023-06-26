@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-FallAllD = pd.read_pickle('./FallAllD/FallAllD.pkl')
-stopWalking = FallAllD.loc[FallAllD['ActivityID'] == 128]
+FallAllD = pd.read_pickle('Dataframes/Wrist Dataframe.pkl')
+stopWalking = FallAllD.loc[FallAllD['ActivityID'] == 12]
 
 
 accX = pd.DataFrame(stopWalking.iloc[0].Acc.tolist())[0]

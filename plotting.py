@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 import pandas as pd
-df = pd.read_pickle("Dataframes/Dataframe3.pkl")
+df = pd.read_pickle("Dataframes/Wrist Dataframe.pkl")
 new = pd.DataFrame(df.Acc[0].tolist())[0]
 new = new.to_list()
 type(new)
@@ -19,4 +19,9 @@ plt.plot(xaxis2, new2, linewidth = 0.5)
 plt.show()
 
 df.Acc.mean()
+
+with open('Accelerometer for 5 seconds.csv', 'w') as f:
+    for line in xaxis2:
+        f.write(f'{line},')
+
 
