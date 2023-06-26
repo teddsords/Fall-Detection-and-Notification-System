@@ -2,6 +2,7 @@
 *.png
 *.ui
 *.zip
+/venv
 Tokens.txt
 Telegram Token.txt
 pywhatkit_dbs.txt
