@@ -35,5 +35,7 @@ ax1[1].set_title('Gyroscope', {'fontsize': 8})
 ax1[1].set_ylabel('°/s')
 
 fig.supxlabel('Time (s)')
+fig.dpi = 200
 plt.legend(loc = 'upper left', prop={'size': 6})
 plt.show()
+#plt.savefig('./Forward fall while walking with recovery.jpeg', dpi=300)
